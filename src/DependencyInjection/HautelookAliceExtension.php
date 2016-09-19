@@ -54,7 +54,7 @@ class HautelookAliceExtension extends Extension implements PrependExtensionInter
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        foreach ($config as $key => $value) {
+        foreach ($this->flattenConfig($config) as $key => $value) {
             $container->setParameter($this->getAlias().'.'.$key, $value);
         }
 
@@ -110,5 +110,28 @@ class HautelookAliceExtension extends Extension implements PrependExtensionInter
     private function isExtensionEnabled($driver)
     {
         return !empty($this->extensions[$driver]);
+    }
+
+    /**
+     * @param array $config
+     *
+     * @return array
+     */
+    private function flattenConfig(array $config)
+    {
+        $func = function($config, $prefix = '') use (&$func) {
+            $out = array();
+            foreach ($config as $k => $v) {
+                $key = ($prefix) ? $prefix.'.'.$k : $k;
+                if (is_array($v)) {
+                    $out += $func($v, $key);
+                } else {
+                    $out[$key] = $v;
+                }
+            }
+            return $out;
+        };
+
+        return $func($config);
     }
 }
