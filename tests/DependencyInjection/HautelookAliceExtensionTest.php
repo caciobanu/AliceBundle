@@ -203,6 +203,55 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Tests with all drivers enabled and the extensions enabled. Expects all drivers loaded.
+     */
+    public function testLoadWithAllDriversEnabledAndWithAllExtensionsEnabledNewConfig()
+    {
+        $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
+
+        $containerBuilderProphecy
+            ->setParameter(
+                'hautelook_alice.db_drivers',
+                [
+                    'orm'     => ['enabled' => true],
+                    'mongodb' => ['enabled' => true],
+                    'phpcr'   => ['enabled' => true],
+                ]
+            )
+            ->shouldBeCalled()
+        ;
+
+        $this->addDoctrineORMDefinitions($containerBuilderProphecy);
+        $this->addDoctrineODMDefinitions($containerBuilderProphecy);
+        $this->addDoctrinePHPCRDefinitions($containerBuilderProphecy);
+
+        $containerBuilderProphecy->getExtensionConfig('doctrine')->willReturn([true]);
+        $containerBuilderProphecy->getExtensionConfig('doctrine_mongodb')->willReturn([true]);
+        $containerBuilderProphecy->getExtensionConfig('doctrine_phpcr')->willReturn([true]);
+
+        $containerBuilder = $containerBuilderProphecy->reveal();
+
+        $extension = new HautelookAliceExtension();
+
+        $extension->prepend($containerBuilder);
+
+        $extension->load(
+            [
+                'hautelook_alice' => [
+                    'db_drivers' => [
+                        'orm'     => ['enabled' => true],
+                        'mongodb' => ['enabled' => true],
+                        'phpcr'   => ['enabled' => true],
+                    ],
+                ],
+            ],
+            $containerBuilder
+        );
+
+        $this->assertTrue(true, 'Expected no error to be thrown.');
+    }
+
+    /**
      * Tests with all drivers enabled and the extensions disabled. Expects all drivers loaded.
      */
     public function testLoadWithAllDriversEnabledAndWithAllExtensionsDisabled()
@@ -245,6 +294,58 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
                         'orm'     => true,
                         'mongodb' => true,
                         'phpcr'   => true,
+                    ],
+                ],
+            ],
+            $containerBuilder
+        );
+
+        $this->assertTrue(true, 'Expected no error to be thrown.');
+    }
+
+    /**
+     * Tests with all drivers enabled and the extensions disabled. Expects all drivers loaded.
+     */
+    public function testLoadWithAllDriversEnabledAndWithAllExtensionsDisabledNewConfig()
+    {
+        $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
+
+        $containerBuilderProphecy
+            ->setParameter(
+                'hautelook_alice.db_drivers',
+                [
+                    'orm'     => ['enabled' => true],
+                    'mongodb' => ['enabled' => true],
+                    'phpcr'   => ['enabled' => true],
+                ]
+            )
+            ->shouldBeCalled()
+        ;
+        $containerBuilderProphecy->setParameter('hautelook_alice.locale', 'en_US')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.seed', 1)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.persist_once', false)->shouldBeCalled();
+
+        $this->addDoctrineORMDefinitions($containerBuilderProphecy);
+        $this->addDoctrineODMDefinitions($containerBuilderProphecy);
+        $this->addDoctrinePHPCRDefinitions($containerBuilderProphecy);
+
+        $containerBuilderProphecy->getExtensionConfig('doctrine')->willReturn([]);
+        $containerBuilderProphecy->getExtensionConfig('doctrine_mongodb')->willReturn([]);
+        $containerBuilderProphecy->getExtensionConfig('doctrine_phpcr')->willReturn([]);
+
+        $containerBuilder = $containerBuilderProphecy->reveal();
+
+        $extension = new HautelookAliceExtension();
+
+        $extension->prepend($containerBuilder);
+
+        $extension->load(
+            [
+                'hautelook_alice' => [
+                    'db_drivers' => [
+                        'orm'     => ['enabled' => true],
+                        'mongodb' => ['enabled' => true],
+                        'phpcr'   => ['enabled' => true],
                     ],
                 ],
             ],
@@ -300,6 +401,51 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Tests with all drivers disabled and the extensions enabled. Expects no drivers loaded.
+     */
+    public function testLoadWithAllDriversDisabledAndWithAllExtensionsEnabledNewConfig()
+    {
+        $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
+
+        $containerBuilderProphecy
+            ->setParameter(
+                'hautelook_alice.db_drivers',
+                [
+                    'orm'     => ['enabled' => false],
+                    'mongodb' => ['enabled' => false],
+                    'phpcr'   => ['enabled' => false],
+                ]
+            )
+            ->shouldBeCalled()
+        ;
+
+        $containerBuilderProphecy->getExtensionConfig('doctrine')->willReturn([true]);
+        $containerBuilderProphecy->getExtensionConfig('doctrine_mongodb')->willReturn([true]);
+        $containerBuilderProphecy->getExtensionConfig('doctrine_phpcr')->willReturn([true]);
+
+        $containerBuilder = $containerBuilderProphecy->reveal();
+
+        $extension = new HautelookAliceExtension();
+
+        $extension->prepend($containerBuilder);
+
+        $extension->load(
+            [
+                'hautelook_alice' => [
+                    'db_drivers' => [
+                        'orm'     => ['enabled' => false],
+                        'mongodb' => ['enabled' => false],
+                        'phpcr'   => ['enabled' => false],
+                    ],
+                ],
+            ],
+            $containerBuilder
+        );
+
+        $this->assertTrue(true, 'Expected no error to be thrown.');
+    }
+
+    /**
      * Tests with all drivers disabled and the extensions disabled. Expects no drivers loaded.
      */
     public function testLoadWithAllDriversDisabledAndWithAllExtensionsDisabled()
@@ -335,6 +481,51 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
                         'orm'     => false,
                         'mongodb' => false,
                         'phpcr'   => false,
+                    ],
+                ],
+            ],
+            $containerBuilder
+        );
+
+        $this->assertTrue(true, 'Expected no error to be thrown.');
+    }
+
+    /**
+     * Tests with all drivers disabled and the extensions disabled. Expects no drivers loaded.
+     */
+    public function testLoadWithAllDriversDisabledAndWithAllExtensionsDisabledNewConfig()
+    {
+        $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
+
+        $containerBuilderProphecy
+            ->setParameter(
+                'hautelook_alice.db_drivers',
+                [
+                    'orm'     => ['enabled' => false],
+                    'mongodb' => ['enabled' => false],
+                    'phpcr'   => ['enabled' => false],
+                ]
+            )
+            ->shouldBeCalled()
+        ;
+
+        $containerBuilderProphecy->getExtensionConfig('doctrine')->willReturn([true]);
+        $containerBuilderProphecy->getExtensionConfig('doctrine_mongodb')->willReturn([true]);
+        $containerBuilderProphecy->getExtensionConfig('doctrine_phpcr')->willReturn([true]);
+
+        $containerBuilder = $containerBuilderProphecy->reveal();
+
+        $extension = new HautelookAliceExtension();
+
+        $extension->prepend($containerBuilder);
+
+        $extension->load(
+            [
+                'hautelook_alice' => [
+                    'db_drivers' => [
+                        'orm'     => ['enabled' => false],
+                        'mongodb' => ['enabled' => false],
+                        'phpcr'   => ['enabled' => false],
                     ],
                 ],
             ],
@@ -386,6 +577,57 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
                         'orm'     => true,
                         'mongodb' => false,
                         'phpcr'   => true,
+                    ],
+                ],
+            ],
+            $containerBuilder
+        );
+
+        $this->assertTrue(true, 'Expected no error to be thrown.');
+    }
+
+    /**
+     * Tests the loading with some drivers enabled and others disabled. Expects the enabled drivers to be loaded.
+     */
+    public function testLoadWithPartialDriversNewConfig()
+    {
+        $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
+
+        $containerBuilderProphecy
+            ->setParameter(
+                'hautelook_alice.db_drivers',
+                [
+                    'orm'     => ['enabled' => true],
+                    'mongodb' => ['enabled' => false],
+                    'phpcr'   => ['enabled' => true],
+                ]
+            )
+            ->shouldBeCalled()
+        ;
+        $containerBuilderProphecy->setParameter('hautelook_alice.locale', 'en_US')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.seed', 1)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.persist_once', false)->shouldBeCalled();
+
+        $this->addDoctrineORMDefinitions($containerBuilderProphecy);
+        $this->addDoctrinePHPCRDefinitions($containerBuilderProphecy);
+
+        $containerBuilderProphecy->getExtensionConfig('doctrine')->willReturn([]);
+        $containerBuilderProphecy->getExtensionConfig('doctrine_mongodb')->willReturn([]);
+        $containerBuilderProphecy->getExtensionConfig('doctrine_phpcr')->willReturn([]);
+
+        $containerBuilder = $containerBuilderProphecy->reveal();
+
+        $extension = new HautelookAliceExtension();
+
+        $extension->prepend($containerBuilder);
+
+        $extension->load(
+            [
+                'hautelook_alice' => [
+                    'db_drivers' => [
+                        'orm'     => ['enabled' => true],
+                        'mongodb' => ['enabled' => false],
+                        'phpcr'   => ['enabled' => true],
                     ],
                 ],
             ],
