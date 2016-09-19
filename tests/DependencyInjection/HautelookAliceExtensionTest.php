@@ -87,9 +87,9 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => null,
-                    'mongodb' => null,
-                    'phpcr'   => null,
+                    'orm'     => ['enabled' => null],
+                    'mongodb' => ['enabled' => null],
+                    'phpcr'   => ['enabled' => null],
                 ]
             )
             ->shouldBeCalled()
@@ -121,9 +121,9 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => null,
-                    'mongodb' => null,
-                    'phpcr'   => null,
+                    'orm'     => ['enabled' => null],
+                    'mongodb' => ['enabled' => null],
+                    'phpcr'   => ['enabled' => null],
                 ]
             )
             ->shouldBeCalled()
@@ -164,9 +164,9 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => true,
-                    'mongodb' => true,
-                    'phpcr'   => true,
+                    'orm'     => ['enabled' => true],
+                    'mongodb' => ['enabled' => true],
+                    'phpcr'   => ['enabled' => true],
                 ]
             )
             ->shouldBeCalled()
@@ -213,9 +213,9 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => true,
-                    'mongodb' => true,
-                    'phpcr'   => true,
+                    'orm'     => ['enabled' => true],
+                    'mongodb' => ['enabled' => true],
+                    'phpcr'   => ['enabled' => true],
                 ]
             )
             ->shouldBeCalled()
@@ -265,9 +265,9 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => false,
-                    'mongodb' => false,
-                    'phpcr'   => false,
+                    'orm'     => ['enabled' => false],
+                    'mongodb' => ['enabled' => false],
+                    'phpcr'   => ['enabled' => false],
                 ]
             )
             ->shouldBeCalled()
@@ -310,9 +310,9 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => false,
-                    'mongodb' => false,
-                    'phpcr'   => false,
+                    'orm'     => ['enabled' => false],
+                    'mongodb' => ['enabled' => false],
+                    'phpcr'   => ['enabled' => false],
                 ]
             )
             ->shouldBeCalled()
@@ -355,9 +355,9 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => true,
-                    'mongodb' => false,
-                    'phpcr'   => true,
+                    'orm'     => ['enabled' => false],
+                    'mongodb' => ['enabled' => false],
+                    'phpcr'   => ['enabled' => false],
                 ]
             )
             ->shouldBeCalled()
