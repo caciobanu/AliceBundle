@@ -24,13 +24,16 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
     private static $defaultConfig = [
         'db_drivers'    => [
             'orm'     => [
-                'enabled' => null,
+                'enabled'              => null,
+                'bundle_fixtures_path' => 'DataFixtures/ORM',
             ],
             'mongodb' => [
-                'enabled' => null,
+                'enabled'              => null,
+                'bundle_fixtures_path' => 'DataFixtures/ODM',
             ],
             'phpcr'   => [
-                'enabled' => null,
+                'enabled'              => null,
+                'bundle_fixtures_path' => 'DataFixtures/PHPCR',
             ],
         ],
         'locale'        => 'en_US',

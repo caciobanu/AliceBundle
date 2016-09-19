@@ -87,9 +87,18 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => ['enabled' => null],
-                    'mongodb' => ['enabled' => null],
-                    'phpcr'   => ['enabled' => null],
+                    'orm'     => [
+                        'enabled'              => null,
+                        'bundle_fixtures_path' => 'DataFixtures/ORM',
+                    ],
+                    'mongodb' => [
+                        'enabled'              => null,
+                        'bundle_fixtures_path' => 'DataFixtures/ODM',
+                    ],
+                    'phpcr'   => [
+                        'enabled'              => null,
+                        'bundle_fixtures_path' => 'DataFixtures/PHPCR',
+                    ],
                 ]
             )
             ->shouldBeCalled()
@@ -121,9 +130,18 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => ['enabled' => null],
-                    'mongodb' => ['enabled' => null],
-                    'phpcr'   => ['enabled' => null],
+                    'orm'     => [
+                        'enabled'              => null,
+                        'bundle_fixtures_path' => 'DataFixtures/ORM',
+                    ],
+                    'mongodb' => [
+                        'enabled'              => null,
+                        'bundle_fixtures_path' => 'DataFixtures/ODM',
+                    ],
+                    'phpcr'   => [
+                        'enabled'              => null,
+                        'bundle_fixtures_path' => 'DataFixtures/PHPCR',
+                    ],
                 ]
             )
             ->shouldBeCalled()
@@ -164,9 +182,18 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => ['enabled' => true],
-                    'mongodb' => ['enabled' => true],
-                    'phpcr'   => ['enabled' => true],
+                    'orm'     => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/ORM',
+                    ],
+                    'mongodb' => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/ODM',
+                    ],
+                    'phpcr'   => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/PHPCR',
+                    ],
                 ]
             )
             ->shouldBeCalled()
@@ -213,9 +240,18 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => ['enabled' => true],
-                    'mongodb' => ['enabled' => true],
-                    'phpcr'   => ['enabled' => true],
+                    'orm'     => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/ORM',
+                    ],
+                    'mongodb' => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/ODM',
+                    ],
+                    'phpcr'   => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/PHPCR',
+                    ],
                 ]
             )
             ->shouldBeCalled()
@@ -262,9 +298,18 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => ['enabled' => true],
-                    'mongodb' => ['enabled' => true],
-                    'phpcr'   => ['enabled' => true],
+                    'orm'     => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/ORM',
+                    ],
+                    'mongodb' => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/ODM',
+                    ],
+                    'phpcr'   => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/PHPCR',
+                    ],
                 ]
             )
             ->shouldBeCalled()
@@ -314,9 +359,18 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => ['enabled' => true],
-                    'mongodb' => ['enabled' => true],
-                    'phpcr'   => ['enabled' => true],
+                    'orm'     => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/ORM',
+                    ],
+                    'mongodb' => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/ODM',
+                    ],
+                    'phpcr'   => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/PHPCR',
+                    ],
                 ]
             )
             ->shouldBeCalled()
@@ -366,9 +420,18 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => ['enabled' => false],
-                    'mongodb' => ['enabled' => false],
-                    'phpcr'   => ['enabled' => false],
+                    'orm'     => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/ORM',
+                    ],
+                    'mongodb' => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/ODM',
+                    ],
+                    'phpcr'   => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/PHPCR',
+                    ],
                 ]
             )
             ->shouldBeCalled()
@@ -411,9 +474,18 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => ['enabled' => false],
-                    'mongodb' => ['enabled' => false],
-                    'phpcr'   => ['enabled' => false],
+                    'orm'     => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/ORM',
+                    ],
+                    'mongodb' => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/ODM',
+                    ],
+                    'phpcr'   => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/PHPCR',
+                    ],
                 ]
             )
             ->shouldBeCalled()
@@ -456,9 +528,18 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => ['enabled' => false],
-                    'mongodb' => ['enabled' => false],
-                    'phpcr'   => ['enabled' => false],
+                    'orm'     => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/ORM',
+                    ],
+                    'mongodb' => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/ODM',
+                    ],
+                    'phpcr'   => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/PHPCR',
+                    ],
                 ]
             )
             ->shouldBeCalled()
@@ -501,9 +582,18 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => ['enabled' => false],
-                    'mongodb' => ['enabled' => false],
-                    'phpcr'   => ['enabled' => false],
+                    'orm'     => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/ORM',
+                    ],
+                    'mongodb' => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/ODM',
+                    ],
+                    'phpcr'   => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/PHPCR',
+                    ],
                 ]
             )
             ->shouldBeCalled()
@@ -546,9 +636,18 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => ['enabled' => true],
-                    'mongodb' => ['enabled' => false],
-                    'phpcr'   => ['enabled' => true],
+                    'orm'     => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/ORM',
+                    ],
+                    'mongodb' => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/ODM',
+                    ],
+                    'phpcr'   => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/PHPCR',
+                    ],
                 ]
             )
             ->shouldBeCalled()
@@ -597,9 +696,18 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => ['enabled' => true],
-                    'mongodb' => ['enabled' => false],
-                    'phpcr'   => ['enabled' => true],
+                    'orm'     => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/ORM',
+                    ],
+                    'mongodb' => [
+                        'enabled'              => false,
+                        'bundle_fixtures_path' => 'DataFixtures/ODM',
+                    ],
+                    'phpcr'   => [
+                        'enabled'              => true,
+                        'bundle_fixtures_path' => 'DataFixtures/PHPCR',
+                    ],
                 ]
             )
             ->shouldBeCalled()
