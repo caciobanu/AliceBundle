@@ -23,9 +23,15 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
 {
     private static $defaultConfig = [
         'db_drivers'    => [
-            'orm'     => null,
-            'mongodb' => null,
-            'phpcr'   => null,
+            'orm'     => [
+                'enabled' => null,
+            ],
+            'mongodb' => [
+                'enabled' => null,
+            ],
+            'phpcr'   => [
+                'enabled' => null,
+            ],
         ],
         'locale'        => 'en_US',
         'seed'          => 1,

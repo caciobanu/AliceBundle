@@ -71,9 +71,9 @@ class HautelookAliceExtension extends Extension implements PrependExtensionInter
             $aliceFakerDefinition->setFactoryMethod('create');
         }
 
-        foreach ($config['db_drivers'] as $driver => $isEnabled) {
-            if (true === $isEnabled
-                || (null === $isEnabled && true === $this->isExtensionEnabled($driver))
+        foreach ($config['db_drivers'] as $driver => $config) {
+            if (true === $config['enabled']
+                || (null === $config['enabled'] && true === $this->isExtensionEnabled($driver))
             ) {
                 $loader->load(sprintf('%s.xml', $driver));
 
