@@ -355,9 +355,9 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
             ->setParameter(
                 'hautelook_alice.db_drivers',
                 [
-                    'orm'     => ['enabled' => false],
+                    'orm'     => ['enabled' => true],
                     'mongodb' => ['enabled' => false],
-                    'phpcr'   => ['enabled' => false],
+                    'phpcr'   => ['enabled' => true],
                 ]
             )
             ->shouldBeCalled()
