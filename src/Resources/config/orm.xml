@@ -7,7 +7,7 @@
     <services>
         <service id="hautelook_alice.doctrine.orm.fixtures_finder"
                  class="Hautelook\AliceBundle\Doctrine\Finder\FixturesFinder">
-            <argument type="string">DataFixtures/ORM</argument>
+            <argument>%hautelook_alice.db_drivers.orm.bundle_fixtures_path%</argument>
             <call method="setContainer">
                 <argument type="service" id="service_container" />
             </call>
