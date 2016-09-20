@@ -87,7 +87,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', null)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', null)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.bundle_fixtures_path', 'DataFixtures/PHPCR')->shouldBeCalled();
 
         $containerBuilderProphecy->getExtensionConfig('doctrine')->willReturn([]);
@@ -116,7 +116,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', null)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', null)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.bundle_fixtures_path', 'DataFixtures/PHPCR')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.locale', 'en_US')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.seed', 1)->shouldBeCalled();
@@ -154,7 +154,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.bundle_fixtures_path', 'DataFixtures/PHPCR')->shouldBeCalled();
 
         $this->addDoctrineORMDefinitions($containerBuilderProphecy);
@@ -198,7 +198,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.bundle_fixtures_path', 'DataFixtures/PHPCR')->shouldBeCalled();
 
         $this->addDoctrineORMDefinitions($containerBuilderProphecy);
@@ -242,7 +242,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.bundle_fixtures_path', 'DataFixtures/PHPCR')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.locale', 'en_US')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.seed', 1)->shouldBeCalled();
@@ -289,7 +289,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.bundle_fixtures_path', 'DataFixtures/PHPCR')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.locale', 'en_US')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.seed', 1)->shouldBeCalled();
@@ -336,7 +336,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.bundle_fixtures_path', 'DataFixtures/PHPCR')->shouldBeCalled();
 
         $containerBuilderProphecy->getExtensionConfig('doctrine')->willReturn([true]);
@@ -376,7 +376,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.bundle_fixtures_path', 'DataFixtures/PHPCR')->shouldBeCalled();
 
         $containerBuilderProphecy->getExtensionConfig('doctrine')->willReturn([true]);
@@ -416,7 +416,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.bundle_fixtures_path', 'DataFixtures/PHPCR')->shouldBeCalled();
 
         $containerBuilderProphecy->getExtensionConfig('doctrine')->willReturn([true]);
@@ -456,7 +456,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.bundle_fixtures_path', 'DataFixtures/PHPCR')->shouldBeCalled();
 
         $containerBuilderProphecy->getExtensionConfig('doctrine')->willReturn([true]);
@@ -496,7 +496,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.bundle_fixtures_path', 'DataFixtures/PHPCR')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.locale', 'en_US')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.seed', 1)->shouldBeCalled();
@@ -542,7 +542,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.bundle_fixtures_path', 'DataFixtures/PHPCR')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.locale', 'en_US')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.seed', 1)->shouldBeCalled();
