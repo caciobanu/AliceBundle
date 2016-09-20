@@ -84,7 +84,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
 
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.enabled', null)->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.enabled', null)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', null)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', null)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
@@ -113,7 +113,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
 
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.enabled', null)->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.enabled', null)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', null)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', null)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
@@ -151,7 +151,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
 
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.enabled', true)->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.enabled', true)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
@@ -195,7 +195,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
 
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.enabled', true)->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.enabled', true)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
@@ -239,7 +239,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
 
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.enabled', true)->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.enabled', true)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
@@ -286,7 +286,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
 
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.enabled', true)->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.enabled', true)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
@@ -333,7 +333,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
 
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.enabled', false)->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.enabled', false)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
@@ -373,7 +373,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
 
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.enabled', false)->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.enabled', false)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
@@ -413,7 +413,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
 
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.enabled', false)->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.enabled', false)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
@@ -453,7 +453,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
 
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.enabled', false)->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.enabled', false)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
@@ -493,7 +493,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
 
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.enabled', true)->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.enabled', false)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
@@ -539,7 +539,7 @@ class HautelookAliceExtensionTest extends \PHPUnit_Framework_TestCase
         $containerBuilderProphecy = $this->getBaseDefaultContainerBuiderProphecy();
 
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.enabled', true)->shouldBeCalled();
-        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.enabled', false)->shouldBeCalled();
+        $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.mongodb.enabled', false)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.phpcr.enabled', true)->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.orm.bundle_fixtures_path', 'DataFixtures/ORM')->shouldBeCalled();
         $containerBuilderProphecy->setParameter('hautelook_alice.db_drivers.odm.bundle_fixtures_path', 'DataFixtures/ODM')->shouldBeCalled();
