@@ -11,3 +11,9 @@ framework:
         enable_annotations: true
     session: ~
     test: ~
+
+hautelook_alice:
+    db_drivers:
+        orm: ~
+        mongodb: ~
+        phpcr: ~

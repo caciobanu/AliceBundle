@@ -75,9 +75,12 @@ Configure the bundle to your needs (example with default values):
 
 hautelook_alice:
     db_drivers:
-        orm: ~          # Enable Doctrine ORM if is registered
-        mongodb: ~      # Enable Doctrine ODM if is registered
-        phpcr: ~        # Enable Doctrine PHPCR ODM if is registered
+        orm:
+            enabled: ~  # Enable Doctrine ORM if is registered
+        mongodb:
+            enabled: ~  # Enable Doctrine ODM if is registered
+        phpcr:
+            enabled: ~  # Enable Doctrine PHPCR ODM if is registered
     locale: en_US       # Locale to used for faker; must be a valid Faker locale otherwise will fallback to en_EN
     seed: 1             # A seed to make sure faker generates data consistently across runs, set to null to disable
     persist_once: false # Only persist objects once if multiple files are passed

@@ -7,16 +7,39 @@ The bundle configuration for the databases is:
 ```yaml
 hautelook_alice:
     db_drivers:
-        orm: ~
-        mongodb: ~
-        phpcr: ~
+        orm:
+            enabled: ~
+        mongodb:
+            enabled: ~
+        phpcr:
+            enabled: ~
 ```
 
-If a driver value is `~` (which is `null`), the driver is enabled only if the proper extension is enabled. For
+If a driver has `enabled` value `~` (which is `null`), the driver is enabled only if the proper extension is enabled. For
 instance, if you have only Doctrine ORM enabled, then the drivers for Doctrine ODM and Doctrine PHPCR ODM won't be
 enabled.
 
-If you which to explicitly enable or disable a driver, just put its value to `true` or `false`.
+If you which to explicitly enable or disable a driver, just put `enabled` value to `true` or `false`.
+
+
+## Change bundle fixtures path
+
+If you wish to use a different bundle folder where fixtures are stored change the value of `bundle_fixtures_path` to fit your needs:
+
+```yaml
+hautelook_alice:
+    db_drivers:
+        orm:
+            enabled: ~
+            bundle_fixtures_path: DataFixtures/ORM
+        mongodb:
+            enabled: ~
+            bundle_fixtures_path: DataFixtures/ODM
+        phpcr:
+            enabled: ~
+            bundle_fixtures_path: DataFixtures/PHPCR
+```
+
 
 ## Doctrine ORM
 
